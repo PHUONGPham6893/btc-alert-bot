@@ -64,7 +64,7 @@ Thời gian: {now}
     bot.send_message(chat_id=CHAT_ID, text=msg)
 
 # Lên lịch gửi lúc 08:00 và 20:00
-schedule.every().day.at("08:00").do(send_alert)
+schedule.every(1).minutes.do(job)
 schedule.every().day.at("20:00").do(send_alert)
 
 # Vòng lặp chính
